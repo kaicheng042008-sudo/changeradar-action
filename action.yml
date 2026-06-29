@@ -1,0 +1,11 @@
+name: "ChangeRadar — Breaking Change Check"
+description: "Flags breaking changes in your project's dependencies, with migration links. Free."
+branding:
+  icon: "radio"
+  color: "green"
+runs:
+  using: "composite"
+  steps:
+    - name: ChangeRadar check
+      shell: bash
+      run: python3 "${{ github.action_path }}/check.py"
